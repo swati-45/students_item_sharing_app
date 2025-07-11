@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f2f2f2;
+  transition: background 0.3s, color 0.3s;
+  position: relative;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input, form select {
+  flex: 1 1 45%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+form button {
+  flex: 1 1 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+#search {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#item-list {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  padding-bottom: 60px; /* Space for bottom-right button */
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+.card h3 {
+  margin: 5px 0;
+}
+
+.card p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.card .status {
+  font-weight: bold;
+  color: green;
+}
+
+.card.lent .status {
+  color: red;
+}
+
+.card .delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card .toggle-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 6px 12px;
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* DARK MODE */
+.dark-mode {
+  background: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.dark-mode .container {
+  background: #2a2a2a;
+}
+
+.dark-mode h1 {
+  color: #4db8ff;
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode button,
+.dark-mode #search {
+  background-color: #222;
+  color: #f0f0f0;
+  border: 1px solid #888;
+}
+
+.dark-mode input::placeholder,
+.dark-mode #search::placeholder {
+  color: #bbb;
+}
+
+.dark-mode select option {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+.dark-mode .card {
+  background-color: #333;
+  border: 1px solid #555;
+}
+
+.dark-mode .card .status {
+  color: #4caf50;
+}
+
+.dark-mode .card.lent .status {
+  color: #ff6347;
+}
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#toggle-mode {
+  background-color: #333;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Campus Exchange</title>
+  <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="form-header">
+  <h1> Students Item Sharing</h1>
+  <button id="toggle-mode">🌙</button>
+</div>
+    <form id="lend-form">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="text" id="branch" placeholder="Branch" required />
+      <input type="text" id="item" placeholder="Item (e.g. Calculator)" required />
+      <input type="number" id="price" placeholder="Price (₹)" required />
+      
+      <select id="negotiable" required>
+        <option value="" disabled selected>Negotiable?</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <input type="tel" id="contact" placeholder="Phone Number" required />
+      <button type="submit">Add Item</button>
+    </form>
+
+    <input type="text" id="search" placeholder="Search by item or branch..." />
+
+    <div id="item-list"></div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
